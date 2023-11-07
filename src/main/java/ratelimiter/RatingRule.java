@@ -8,13 +8,11 @@ public class RatingRule {
     ArrayBlockingQueue<String> queRule1;
     int allowedRequest;
     int timeFrame;
-    int currentRequestCount;
 
-    public RatingRule(HashMap<String, Integer> mapRule, ArrayBlockingQueue<String> queRule1, int allowedRequest, int timeFrame, int currentRequestCount) {
+    public RatingRule(HashMap<String, Integer> mapRule, ArrayBlockingQueue<String> queRule1, int allowedRequest, int timeFrame) {
         this.mapRule = mapRule;
         this.queRule1 = queRule1;
         this.allowedRequest = allowedRequest;
         this.timeFrame = timeFrame;
-        this.currentRequestCount = currentRequestCount;
     }
 }
