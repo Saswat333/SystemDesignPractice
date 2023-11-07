@@ -8,6 +8,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RateLimiterTest {
+    // Note: To add a new testcase just change the requestInput and expectedOutput, keep rest of the code as it is.
     @Test
     void successInput01Test(){
         String[] requestInput = {"www.xyz.com", "www.abc.com", "www.xyz.com", "www.pqr.com", "www.abc.com", "www.xyz.com", "www.xyz.com", "www.abc.com", "www.xyz.com"};
@@ -89,6 +90,8 @@ class RateLimiterTest {
         assertArrayEquals(expectedOutput, result);
     }
 
+    // The below testcase checks both the rules
+    // Note: To add a new testcase just change the requestInput and expectedOutput, keep rest of the code as it is.
     @Test
     void successInputWithBothRules05Test(){
         String[] requestInput = {"www.a.com", "www.b.com", "www.a.com", "www.c.com", "www.b.com", "www.a.com", "www.c.com", "www.b.com", "www.a.com", "www.d.com", "www.a.com", "www.d.com", "www.b.com","www.a.com"};
